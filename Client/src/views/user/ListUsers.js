@@ -191,7 +191,7 @@ class ListUsers extends React.Component {
                             </Button>
                     </Col>
                     <Col md="4"  className="text-center">
-                      {currentPage}
+                      <div class="py-2 font-weight-bold">{currentPage}</div>
                     </Col>
                     <Col md="4"  className="text-right">
                     <Button onClick={() => this.handleNextPage()} className="btn-link" color="primary" type="button">

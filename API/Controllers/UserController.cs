@@ -24,7 +24,7 @@ namespace TrabalhoRest.Controllers
         // GET api/user
         [HttpGet]
         public async Task<IActionResult> Get([FromQuery]int page = 1
-                , [FromQuery]int limit = 1)
+                , [FromQuery]int limit = 10)
         {
             try
             {
@@ -85,6 +85,28 @@ namespace TrabalhoRest.Controllers
                 return new BadRequestObjectResult(ex.Message);
             }
         }
+
+        [HttpGet("cpf/{cpf}")]
+        public async Task<IActionResult> GetByCpf(string cpf)
+        {
+            try
+            {
+                await Db.Connection.OpenAsync();
+                var query = new UserQuery(Db);
+                var result = await query.FindOneByCpfAsync(cpf);
+
+                if (result is null){
+                    return new NotFoundResult();
+                }
+
+                return new OkObjectResult(result);
+            }
+            catch(Exception ex)
+            {
+                return new BadRequestObjectResult(ex.Message);
+            }
+        }
+
 
         // POST api/user
         [HttpPost]

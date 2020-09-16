@@ -18,13 +18,24 @@
 import UpdateUser from "views/user/UpdateUser.js";
 import RegisterUser from "views/user/CreateUser.js";
 import ListUsers from "views/user/ListUsers";
+import UserByCpf from "views/user/UserByCpf";
 
 var routes = [
+
+  {
+    path: "/list",
+    name: "Listar Usuários",
+    rtlName: "لوحة القيادة",
+    icon: "tim-icons icon-bullet-list-67",
+    component: ListUsers,
+    layout: "/user",
+    showMenu: true
+  },
   {
     path: "/register",
     name: "Criar Usuário",
     rtlName: "لوحة القيادة",
-    icon: "tim-icons icon-chart-pie-36",
+    icon: "tim-icons icon-simple-add",
     component: RegisterUser,
     layout: "/user",
     showMenu: true
@@ -39,11 +50,11 @@ var routes = [
     showMenu: false
   },
   {
-    path: "/list",
-    name: "Listar Usuários",
+    path: "/byCpf",
+    name: "Usuário Por CPF",
     rtlName: "لوحة القيادة",
-    icon: "tim-icons icon-chart-pie-36",
-    component: ListUsers,
+    icon: "tim-icons icon-zoom-split",
+    component: UserByCpf,
     layout: "/user",
     showMenu: true
   }];

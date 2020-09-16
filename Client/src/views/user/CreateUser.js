@@ -212,7 +212,7 @@ class RegisterUser extends React.Component {
                           <label>Número</label>
                           <Input
                             onChange={this.handleNumberChange}
-                            placeholder="CPF"
+                            placeholder="Número"
                             type="text"
                           />
                         </FormGroup>

@@ -70,7 +70,7 @@ class UpdateUser extends React.Component {
   }
 
   handleCPFChange(event) {
-    this.setState({surname: event.target.value});
+    this.setState({cpf: event.target.value});
   }
 
   handleStreetChange(event) {
@@ -248,7 +248,7 @@ class UpdateUser extends React.Component {
                           <label>Logradouro</label>
                           <Input                          
                             onChange={this.handleStreetChange}
-                            placeholder="Nome"
+                            placeholder="Logradouro"
                             type="text"
                             value={userAddressStreet}
                           />
@@ -259,7 +259,7 @@ class UpdateUser extends React.Component {
                           <label>Número</label>
                           <Input
                             onChange={this.handleNumberChange}
-                            placeholder="CPF"
+                            placeholder="Número"
                             type="text"
                             value={userAddressNumber}
                           />
