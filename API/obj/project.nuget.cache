@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "q/cUd/Tvu/pS37GI8sdyT0hK4/aZStadGBDZfpTN/4mbkPueUu7jlNuYiaCyFpt6skXfOENwdh6leKcFgNvsEQ==",
+  "success": true,
+  "projectFilePath": "/home/gobira/Projects/trabalhoREST/API/TrabalhoRest.csproj",
+  "expectedPackageFiles": [
+    "/home/gobira/.nuget/packages/mysqlconnector/1.0.1/mysqlconnector.1.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
