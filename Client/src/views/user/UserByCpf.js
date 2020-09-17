@@ -59,7 +59,7 @@ class UserByCpf extends React.Component {
   }
 
   async handleGetUser(cpf) {
-console.log(cpf);
+    
     const response = api.get("user/cpf/" + cpf)
     .then(response => {
       this.setState({ name: response.data.name });
@@ -68,23 +68,13 @@ console.log(cpf);
       this.setState({ number: response.data.address.number });
     })
     .catch(err => {
-      console.log(err);
       var errorMessage = "Ocorreu um erro ao buscar o usuário";
 
       if(err.status === 404){
         errorMessage = "Usuário não encontrado";
       }
 
-      // options = {
-      //   place: "tr",
-      //   message: errorMessage,
-      //   type: "warning",
-      //   icon: "tim-icons icon-bell-55",
-      //   autoDismiss: 7
-      // };
-
-      // this.refs.notificationAlert.notificationAlert(options);
-
+      console.log(errorMessage);
     });
   }
 

@@ -115,17 +115,6 @@ class ListUsers extends React.Component {
     })
     .catch(err => {
       console.log(err);
-
-      // options = {
-      //   place: "tr",
-      //   message: "Não existem usuários cadastrados.",
-      //   type: "warning",
-      //   icon: "tim-icons icon-bell-55",
-      //   autoDismiss: 7
-      // };
-
-      // this.refs.notificationAlert.notificationAlert(options);
-
     });
   }
 

@@ -18,6 +18,7 @@ namespace TrabalhoRest
     public class Startup
     {
         readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+        readonly string connection = "Server=localhost;Port=3306;Database=ufrj;Uid=root;Pwd=root";
 
         public Startup(IConfiguration configuration)
         {
@@ -41,7 +42,7 @@ namespace TrabalhoRest
         });
 
             services.AddControllers();
-            var connection = "Server=localhost;Port=3306;Database=ufrj;Uid=root;Pwd=root";
+            
             services.AddTransient<AppDb>(_ => new AppDb(connection));
         }
 

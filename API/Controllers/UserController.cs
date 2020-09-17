@@ -107,7 +107,6 @@ namespace TrabalhoRest.Controllers
             }
         }
 
-
         // POST api/user
         [HttpPost]
         public async Task<IActionResult> Post([FromBody]User body)
